@@ -34,3 +34,13 @@
 //     code to be executed
 // }
 // while(condition)
+
+let number = 0
+let sum =0
+
+do{
+    sum = sum + number
+    console.log(sum)
+    number++
+}
+while(number<=10)
