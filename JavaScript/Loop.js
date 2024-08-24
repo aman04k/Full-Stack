@@ -35,12 +35,18 @@
 // }
 // while(condition)
 
-let number = 0
-let sum =0
+// let number = 0
+// let sum =0
 
-do{
-    sum = sum + number
-    console.log(sum)
-    number++
-}
-while(number<=10)
+// do{
+//     sum = sum + number
+//     console.log(sum)
+//     number++
+// }
+// while(number<=10)
+
+// Assignment 
+// 1. factorial of a number
+// 3. Prime number
+// 4. Reverse number
+
