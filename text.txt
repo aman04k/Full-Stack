@@ -1,0 +1,45 @@
+Full Stack=>
+1. Frontend Development=> HTML, CSS, Javascript, React js, Bootestrap 
+2. Backend => Node js, Express js
+3. Database=>  MY SQL,Mongo DB
+
+LIST=>
+1. OL => Order List 
+2. UL => Unorder List
+
+
+CSS =>
+1. Inline CSS
+2. Internal CSS
+3. External CSS
+
+BOX MOdel=>
+1. Boder
+2. Margin => Margin-top, Margin-Right, Margin-Left, Margin-Bottom
+3. Padding= Padding-top, Padding-Right, Padding-Left, Padding-Bottom
+
+
+Postion => Absolute
+2. Realetive
+3. Fixed
+4. Stack
+5. stacky
+
+
+Javascript=>
+let, var, const
+let=> block scope
+const=> block scope
+var=> function scope
+
+Array => Collection of a  different data type is called a array
+1. Pop
+2. push
+3. shift
+4. unshift
+5. slice
+
+loop=> loop are used to repeatedly execute a block of a code.
+1. for  loop
+2. do while loop
+3. while loop

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transform</title>
+    <style>
+        .box{
+            width: 200px;   
+            height: 200px;
+            background-color: red;
+            border: 2px solid black;
+            /* transition: 0s; */
+            transition-duration: 5s;
+            transition-property: all;
+            /* transition-delay: 2s; */
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .box:hover{
+            /* transform: rotate(360deg);    */
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            /* margin: 20px; */
+            /* transform: scale(0.5); */
+            /* transform: skewX(40deg); */
+            transform: translate(-200px,-200px);
+
+        }
+        .p{
+            transform: translateX(200px);
+            font-size: 30px;
+            color: blue;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    
+</body>
+</html>
