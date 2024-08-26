@@ -95,15 +95,30 @@
 // }
 
 
-let num = [1,2,3,4,5]
-let start = 0
-let end = num.length-1
+let num = 11
+let count = 0
 
-while(start<=end){
-    let a = num[start]
-    num[start] = num[end]
-    num[end] = a
-    start++
-    end--
+for(let i=0; i<=num; i++){
+    if(num%i==0){
+        count++
+    }
 }
-console.log(num)
+if(count == 2){
+    console.log("Prime number")
+}   
+else{
+    console.log("Not Prime number")
+}
+
+// let num = [1,2,3,4,5]
+// let start = 0
+// let end = num.length-1
+
+// while(start<=end){
+//     let a = num[start]
+//     num[start] = num[end]
+//     num[end] = a
+//     start++
+//     end--
+// }
+// console.log(num)
