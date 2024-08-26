@@ -50,3 +50,46 @@
 // 3. Prime number
 // 4. Reverse number
 
+
+// 1. factorial of a number
+// let num = 4
+// let fact = 1
+// for(let i=1; i<=num; i++){
+//     fact = fact * i 
+// }
+// console.log(fact)
+
+
+
+
+// 4. Reverse number
+
+// let num = [1,2,3,4,5]
+//  let start = 0
+//  let end = num.length-1
+
+//  while(start<=end){
+//     let temp = num[start]
+//     num[start] = num[end]
+//     num[end] = temp
+//     start++
+//     end--
+//  }
+//  console.log(num)
+
+
+
+// 3. Prime number
+let num = 12
+let count = 0
+for(let i=1; i<=num; i++){
+    if(num%i == 0){
+        count++
+    }
+}
+if(count == 2){
+    console.log("Prime number")
+}
+else{
+    console.log("Not Prime number")
+}
