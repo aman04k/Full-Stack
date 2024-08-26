@@ -43,3 +43,9 @@ loop=> loop are used to repeatedly execute a block of a code.
 1. for  loop
 2. do while loop
 3. while loop
+
+Dom=> Document Object MOdel
+1. getElementById()
+2. getElementByClassName()
+3. getElementByTagName 
+4. querySelector("")
