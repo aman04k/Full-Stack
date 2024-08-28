@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Project</title>
+</head>
+<body>
+    <!-- <h1 id="heading" onclick="alert('Hello World')" >Event Project</h1>
+    <h2 class="box"></h2>
+    <p id="para"></p>
+
+    <button onclick=document.getElementById('heading').style.color='red'>Click</button>
+    <button onclick="document.getElementsByClassName('box')[0].innerHTML= 'hello Jaipur'"> click here</button>
+
+    <button onclick="document.getElementById('para').innerHTML = new Date()>Current Time</button>
+
+    <button onclick="document.getElementById('para').innerHTML = new Date()">Current time</button> -->
+
+    <!-- <p id="time"></p> -->
+    <button id="time">submit here</button>
+
+
+     <script>
+
+        // let time = document.getElementById('time')
+        //  time.addEventListener('click', function(){
+        //     document.getElementById('time').innerHTML = new Date()
+        //     // alert("curret time")
+        //  })
+
+        // time.addEventListener('doubleclick', function(){
+        //     document.getElementById('time').innerHTML = new Date()
+        //     time.style.color = "red"
+        //     // alert("curret time")
+        //  })
+    
+          time.addEventListener('dblclick', function(){
+            document.getElementById('time').innerHTML = new Date()
+            time.style.color = "red"
+            
+         })
+     </script>
+
+
+
+</body>
+
+
+</html>
