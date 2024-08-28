@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">Welcome to DOM</h1>
+    <ul id="list">
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Bird</li>   
+        <li>Fish</li>
+        <li>Snake</li>
+    </ul>
+
+    <script>
+        
+      
+
+
+      const newItem = document.createElement("li");
+     newItem.textContent = "Hello";  
+
+     list.appendChild(newItem);
+
+
+        const listItems = document.querySelectorAll("li");
+
+        
+        listItems.forEach(item => {
+            item.style.color = "red";
+            item.style.padding = "20px"
+            item.style.border = "2px solid black"
+            item.style.listStyle = "none"
+        });
+    </script>
+</body>
+</html>
