@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval Project</title>
+</head>
+
+<body>
+    
+    <h1>Welcome to Jaipur</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nam quod hic inventore quo doloremque
+        quidem. Error, ipsam eos distinctio numquam adipisci modi veritatis eligendi blanditiis delectus, minus
+        atque eum?</p>
+
+    <button onclick="stopColor()">Stop Color</button>
+    <button onclick="starColor()">Start Color</button>
+  
+    <script>
+        let myInterval = setInterval(setColor, 500);
+
+        function setColor() {
+            let x = document.body;
+            x.style.background = x.style.background === "yellow" ? "red" : "yellow";
+        }
+
+        function stopColor() {
+            clearInterval(myInterval);
+        }
+
+        function starColor() {
+            myInterval = setInterval(setColor, 500);
+        }
+    </script>
+
+</body>
+
+</html>
