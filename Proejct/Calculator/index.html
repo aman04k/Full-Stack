@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    #screen {
+        width: 200px;
+        height: 50px;
+        margin: 5px;
+        font-size: 25px;
+        text-align: right;
+        background-color: black;
+        color: white;
+        padding: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <h1>Calculator Project</h1>
+    <div class="container">
+        <div class="row">
+
+            <input type="text" id="screen">
+
+            <div class="col">
+                <button>(</button>
+                <button>)</button>
+                <button>C</button>
+                <button>%</button>
+            </div>
+
+            <div class="col">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>X</button>
+            </div>
+
+            <div class="col">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+            </div>
+
+            <div class="col">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+            </div>
+
+            <div class="col">
+                <button>0</button>
+                <button>.</button>
+                <button>/</button>
+                <button>=</button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("screen").value = ""; // Clear screen on load
+
+        let buttons = document.getElementsByTagName("button");
+        for (let button of buttons) {
+            button.addEventListener("click", function () {
+                let value = this.innerText;
+
+                if (value === "C") {
+                    document.getElementById("screen").value = ""; // Clear screen
+                } else if (value === "=") {
+                    try {
+                        let result = eval(document.getElementById("screen").value.replace('X', '*')); // Replace 'X' with '*' for multiplication
+                        document.getElementById("screen").value = result;
+                    } catch {
+                        document.getElementById("screen").value = "Error"; // Display error on invalid input
+                    }
+                } else {
+                    document.getElementById("screen").value += value; // Append button value to the screen
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+   

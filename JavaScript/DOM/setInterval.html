@@ -27,10 +27,12 @@
 
         function stopColor() {
             clearInterval(myInterval);
+            alert("Color stopped");
         }
 
         function starColor() {
             myInterval = setInterval(setColor, 500);
+            alert("Color started");
         }
     </script>
 

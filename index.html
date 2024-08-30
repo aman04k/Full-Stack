@@ -7,12 +7,18 @@
 </head>
 <body>
     <!-- <div class="box"></div> -->
-     <h1>this keyword</h1>
-<!-- 
+     <h1 class="box"></h1>
+
     <script>
-        // let x = this
-        // console.log(x)
-        alert("hello Aman")
-    </script> -->
+        let x = this
+       let y = document.getElementsByClassName("box")[0]
+
+        y.textContent = "Hello Aman"
+        y.addEventListener("click", function(){
+                x = this
+                console.log(x)
+        })
+       
+    </script>
 </body>
 </html>
