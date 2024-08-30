@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formerror {
+            color: red;
+        }
+
+        .formdesign {
+            margin: 10px;
+        }
+
+        .formdesign input {
+            padding: 5px;
+        }
+
+        .formdesign b {
+            color: red;
+        }
+
+        .formdesign span {  
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Validation</h1>
+
+    <form name="myForm" onsubmit="return ValidateForm()" method="post">
+        <div class="formdesign" id="name-div">
+            Name: <input type="text" id="name" name="fname" placeholder="Enter your name"><b><span
+                    class="formerror"></span></b> <br><br>
+        </div>
+
+        <div class="formdesign" id="phone-div">
+            Phone: <input type="tel" id="phone" name="fphone" placeholder="Enter your phone number"><b><span
+                    class="formerror"></span></b> <br><br>
+        </div>
+
+        <div class="formdesign" id="email-div">
+            Email: <input type="email" id="email" name="femail" placeholder="Enter your email"><b><span
+                    class="formerror"></span></b> <br><br>
+        </div>
+
+        <div class="formdesign" id="password-div">
+            Password: <input type="password" id="fpass" name="password" placeholder="Enter your password"><b><span
+                    class="formerror"></span></b> <br><br>
+        </div>
+
+        <input type="submit" class="but">
+    </form>
+
+    <script>
+        function seterror(id, error) {
+            // sets error inside the span element of the corresponding div
+            const element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+
+        function ValidateForm() {
+            var returnval = true;
+
+            // Name validation
+            var name = document.forms['myForm']["fname"].value;
+            if (name.length < 5) {
+                seterror("name-div", "Length of name is too short");
+                returnval = false;
+
+            }
+            
+
+            // Phone validation
+            var phone = document.forms['myForm']["fphone"].value;
+            if (phone.length != 10) {
+                seterror("phone-div", "Phone number should be 10 digits long");
+                returnval = false;
+
+            }
+
+            // Email validation
+            var email = document.forms['myForm']["femail"].value;
+            if (email.length < 5) {
+                seterror("email-div", "Email is too short");
+                returnval = false;
+
+            }
+
+            // Password validation
+            var password = document.forms['myForm']["password"].value;
+            if (password.length < 6) {
+                seterror("password-div", "Password must be at least 6 characters long");
+                returnval = false;
+
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
