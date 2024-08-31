@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Cookie Form</title>
+</head>
+<body>
+    <h2>Set a Cookie</h2>
+    <form id="cookieForm">
+        <label for="key">Cookie Key:</label>
+        <input type="text" id="key" name="key" required><br><br>
+        <label for="value">Cookie Value:</label>
+        <input type="text" id="value" name="value" required><br><br>
+        <button type="button" onclick="setCookieFromForm()">Set Cookie</button>
+    </form>
+
+    <script>
+        function setCookieFromForm() {
+            let key = document.getElementById('key').value;
+            let value = document.getElementById('value').value;
+
+            // Expire cookie in 10 seconds
+            let expiresInSeconds = 10;
+            let date = new Date();
+            date.setTime(date.getTime() + (expiresInSeconds * 1000));
+            let expires = "expires=" + date.toUTCString();
+
+            // Set cookie
+            document.cookie = `${key}=${value}; ${expires}; path=/`;
+            console.log(`Cookie set: ${document.cookie}`);
+        }
+    </script>
+</body>
+</html>

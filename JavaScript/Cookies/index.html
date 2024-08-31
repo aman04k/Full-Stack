@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+
+<body>
+    <h1>welcome to cookie</h1>
+
+    <script>
+        console.log(document.cookie);
+        document.cookie = "name=Himanshu";
+
+        console.log(document.cookie);
+
+        let key = prompt("Enter key");
+        let value = prompt("Enter value");
+        document.cookie = `${key}=${value}`;
+        console.log(document.cookie);
+    </script>
+</body>
+
+</html>
