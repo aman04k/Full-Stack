@@ -7,6 +7,18 @@
 </head>
 <body>
     
-    <h2>name </h2>
+    <h1> my name <b id="name">fake name</b></h1>
+
+ <script>
+    async function gitapi() {
+        let data = await fetch("https://api.github.com/users/aman04k")
+        let data1 = await data.json()
+        console.log(data1)
+         
+         let name =  document.getElementById("name")
+          name.innerHTML = data1.name
+    }
+    gitapi()
+ </script>
 </body>
 </html>

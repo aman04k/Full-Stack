@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+    
+    <div class="fullscreen-logo">
+        <div class="icon">⚡</div>
+    </div>
+
+    <div class="content">
+        <div class="logo">
+            <div class="icon">🚀</div> GitHub Explorer
+        </div>
+
+        <div class="container">
+            <input type="text" id="username" placeholder="Enter GitHub username">
+            <button onclick="gitapi()">Explore</button>
+        </div>
+
+        <div class="card" id="user-info">
+            <img id="avatar" src="" alt="User Avatar">
+            <h1 id="name">N/A</h1>
+            <p>Followers: <span id="followers">N/A</span></p>
+            <p>Following: <span id="following">N/A</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+ </body>
+ </html>
