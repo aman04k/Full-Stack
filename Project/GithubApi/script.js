@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.querySelector('.fullscreen-logo').style.display = 'none';
         document.querySelector('.content').classList.add('visible');
-    }, 3000); // 3 seconds delay for the logo animation
+    }, 3000);
 });
 
 async function gitapi() {
