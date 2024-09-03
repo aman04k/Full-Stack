@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display API in Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .card .total {
+            font-weight: bold;
+            color: #e91e63;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Display Cards</h1>
+
+    <div id="cartContainer" class="container"></div>
+
+    <script>
+        async function displayApi() {
+            const response = await fetch("https://dummyjson.com/carts");
+            const data = await response.json();
+            const carts = data.carts;
+            const container = document.getElementById("cartContainer");
+
+            const cards = carts.map(cart =>
+                cart.products.map(product => 
+                    `<div class="card">
+                        <img src="${product.thumbnail || 'https://via.placeholder.com/2000'}" alt="${product.title}">
+                        <h2>${product.title}</h2>
+                        <p>Price: $${product.price}</p>
+                        <p>Quantity: ${product.quantity}</p>
+                        <p class="total">Total: $${product.price * product.quantity}</p>
+                    </div>`
+                ).join('')
+            ).join('');
+
+            container.innerHTML = cards;
+        }
+
+        
+
+        displayApi();
+    </script>
+</body>
+</html>

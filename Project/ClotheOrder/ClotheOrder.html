@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Items</title>
+    <link rel="stylesheet" href="ClotheOrder.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">My Store</div>
+        <ul class="navbar-menu">
+            <li><a href="#cart-container">Home</a></li>
+            <li><a href="#order-container">Order</a></li>
+            <li><a href="#" id="search-toggle">Search</a></li>
+            <li><a href="#" id="login-toggle">Login</a></li>
+            <li><a href="#" id="signup-toggle">Signup</a></li>
+            <li><a href="#" id="logout" style="display: none;">Logout</a></li>
+        </ul>
+    </nav>
+
+  
+
+<!-- Order Section (will only show purchased items) -->
+<div class="order-summary" id="orderItems">
+    <h2>Order Summary</h2>
+    <!-- Ordered items will be dynamically shown here -->
+</div>
+
+    <div class="search-container" id="search-container" style="display: none;">
+        <input type="text" id="search-input" placeholder="Search carts...">
+        <button id="search-button">Search</button>
+    </div>
+
+    <div class="auth-container" id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-button">Login</button>
+        <p id="login-message"></p>
+    </div>
+
+    <div class="auth-container" id="signup-container">
+        <h2>Signup</h2>
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button id="signup-button">Signup</button>
+        <p id="signup-message"></p>
+    </div>
+
+    <h1>Cart Items</h1>
+    <div id="cart-container" class="cart-container"></div>
+
+    <h2>Your Order</h2>
+    <div id="order-container" class="order-container">
+        <p id="empty-order-message">No items in your order yet.</p>
+    </div>
+
+    <script src="ClotheOrder.js"></script>
+</body>
+</html>
