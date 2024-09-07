@@ -1,0 +1,12 @@
+ .App{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 0 auto;
+ }
+ .App button{
+    width: 100px;
+    height: 50px;
+    background-color: brown;
+    
+ }
