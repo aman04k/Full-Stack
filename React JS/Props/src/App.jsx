@@ -1,4 +1,5 @@
 import Blogs from "./components/Blogs"
+// import postdata from "./components/postdata"
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
      <Blogs />
+     {/* <postdata /> */}
     </>
   )
 }
