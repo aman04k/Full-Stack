@@ -1,0 +1,16 @@
+React Indroduction
+how to render in React
+JSX
+Functional component 
+export and import
+curlybracketd in JSX
+Fragment in React
+styling in React
+list and key
+conditional rendering 
+event handling
+state
+forms
+hooks
+react - router
+redux
