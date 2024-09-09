@@ -1,17 +1,14 @@
-
-import './App.css'
-import Posts from './components/Posts'
-
-
+import "./App.css";
+import Posts from "./components/Posts";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-    <Posts />
+      <Posts />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
