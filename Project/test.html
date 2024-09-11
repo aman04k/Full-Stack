@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    async function getData() {
+        //         let res=await fetch('http://localhost:3000/product')
+        //         let data=await res.json()
+        //         console.log(data)
+        //    }
+        //    getData()
+        async function getData() {
+            let res = await fetch('http://localhost:3000/product', {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: "shoe",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUvmNnhsM0LonMWv8dDX19ewZK4URswni3atEFx6gywJ-rBLWRewj4CTcqN5YLk5Uj25w&usqp=CAU",
+                    description: "this is  a shoe",
+                    price: 850000
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            let data = await res.json()
+            console.log(data)
+        }
+
+        // getData()
+
+
+    </script>
+</body>
+
+</html>

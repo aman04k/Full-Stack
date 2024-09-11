@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<h1>    </h1>
 
-      <script>
-    
-        async function apidata(){
-            let data = await  fetch("https://dummyjson.com/carts")
-            let data1 = await data.json()
-            console.log(data1.carts)
-        }
-        apidata()
-      </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1> Welcome to API </h1>
+
+  <script>
+   async function apidata() {
+       let data = await fetch("https://dummyjson.com/carts")
+       let data1 = await data.json()
+       console.log(data1.carts)
+ }
+    apidata()
+  </script>
 </body>
 
 </html>
