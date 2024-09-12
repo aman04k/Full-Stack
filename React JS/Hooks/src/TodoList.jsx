@@ -58,6 +58,7 @@
 
 
 import  { useState } from 'react';
+import './App.css';
 
 const TodoList = () => {
   const [todo, setTodo] = useState([]);
