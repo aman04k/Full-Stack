@@ -27,3 +27,30 @@ const UseEffect = () => {
 }
 
 export default UseEffect;
+
+
+
+
+
+// import React from 'react'
+
+
+// const UseEffect = () => {
+//   async function apidata() {
+//     let res = await fetch('https://dummyjson.com/carts');
+//     let data = await res.json();
+//     console.log(data);
+//   }
+
+//   // Call the function directly inside the component
+//   apidata();
+
+//   return (
+//     <div>
+//       {/* Your component content */}
+//     </div>
+//   );
+// };
+
+// export default UseEffect;
+

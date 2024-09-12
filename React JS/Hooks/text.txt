@@ -1,10 +1,21 @@
+
+
+
+useEffect => 
+
+1.every hooks must start with use keyword
+2.hooks providee react feact fo functions components
+3.hooks should be called only once
+4. can't use conditional and loop 
+5. can't use multiple hooks
+
+syntax of useEffect => 
 useEffect(() => {
     
 },[])
 
-
-
-
+[]=> dependency array is blank than functions will be called only once
+    idf value in dependency array is changed than function will be called again 
 
 
 
