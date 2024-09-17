@@ -1,0 +1,7 @@
+Backend => Node js, expressjs, Mongo DB
+
+npm init -y => to create package.json
+npm i expressjs mongoose => to install expressjs and mongoose
+
+
+npm i -g nodemon
