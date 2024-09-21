@@ -1,38 +1,58 @@
-/* General styling for the return page */
+ /* General styling for the return page */
 .return-page {
   padding: 20px;
-  font-family: Arial, sans-serif;
-  /* max-width: 900px; */
   margin: auto;
+  font-family: Arial, sans-serif;
 }
 
 /* Steps section */
-.steps {
+.step-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
+  position: relative;
+  width: 100%;
 }
 
 .step {
-  flex: 1;
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 10px;
-  border-bottom: 2px solid lightgray;
+  position: relative;
 }
 
-.step.active {
-  color: black;
-  border-bottom: 2px solid black;
+.step button {
+  border: 2px solid #ccc;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: none;
+  color: #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
 
-/* Main heading and paragraph */
-h2 {
-  margin-top: 20px;
-  font-size: 1.8rem;
+.active-step button {
+  background-color: #000;
+  color: white;
+  border: none;
 }
 
-p {
-  color: #555;
+.label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+.hr-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #ccc;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Item card styling */
@@ -42,15 +62,14 @@ p {
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  align-items: center;
   flex-wrap: wrap;
+  box-shadow: 4px 5px 4px 0px rgba(96, 90, 90, 0.75);
 }
-
 .item-card input {
-  margin-right: 20px;
-  width: 20px;
-  height: 20px;
+  margin-right: 10px;
   accent-color: red;
+  width: 20px;
+  
 }
 
 .item-details {
@@ -69,12 +88,9 @@ p {
   font-size: 14px;
 }
 
-/* Return information styling */
 .return-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 20px;
 }
 
 .return-days {
@@ -98,39 +114,31 @@ p {
 .reason {
   padding: 10px;
   border-radius: 5px;
-  font-size: 14px;
   margin-top: 10px;
   border: 1px solid #ccc;
-  width: 100%;
 }
 
 /* Return summary styling */
 .return-summary-container {
   margin-top: 20px;
+  width: 100%;
   max-width: 400px;
   margin-left: auto;
 }
 
 .return-summary {
   margin: 20px 0;
-  padding: 20px;
-  border-top: 1px solid #ccc;
 }
 
-.return-summary h3 {
-  font-size: 18px;
+.summary-item,
+.summary-refund {
+  display: flex;
+  justify-content: space-between;
 }
 
-.return-summary p {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-/* Button styling */
 .buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
 .back-button,
@@ -153,25 +161,13 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .steps {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .item-card {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 10px;
   }
 
   .return-info {
-    margin-left: 0;
     margin-top: 20px;
-    text-align: center;
-  }
-
-  .return-summary-container {
-    margin-left: 0;
-    width: 100%;
   }
 
   .buttons {
@@ -182,7 +178,21 @@ p {
   .back-button,
   .create-return-button {
     width: 100%;
-    max-width: 300px;
     margin-top: 10px;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+
+  .hr-line {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .return-summary-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 }

@@ -18,4 +18,22 @@ redux
 
 
 Project Blog Website =>
- 
+
+Pages=> home, blogs, single blog, create blog, about, contact
+
+user=> sign up , login , card
+
+Post = 
+[
+    {
+        title: "my blog",
+        id: 1,
+        date, images
+
+    }
+
+
+    user => [{
+        name, email, image, age
+    }]
+]

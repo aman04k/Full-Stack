@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ReturnPage.css"; // Ensure to link the correct CSS file
+import "./ReturnPage.css";
 
 const ReturnPage = () => {
   const [reason, setReason] = useState("Too Small");
@@ -7,14 +7,24 @@ const ReturnPage = () => {
   return (
     <div className="return-page">
       {/* Steps for return */}
-      <div className="steps">
-        <span className="step active">1 Items to return</span>
-        <span className="step">2 Return Method</span>
-        <span className="step">3 Return Created</span>
+      <div className="step-container">
+        <div className="step active-step">
+          <button>1</button>
+          <span className="label">Items to return</span>
+        </div>
+        <hr className="hr-line" />
+        <div className="step">
+          <button>2</button>
+          <span className="label">Return Method</span>
+        </div>
+        <hr className="hr-line" />
+        <div className="step">
+          <button>3</button>
+          <span className="label">Return Created</span>
+        </div>
       </div>
 
       <h2>Select the items to Return</h2>
-      <hr />
       <p>Tick the items you want to return and select the reason(s) for return</p>
 
       {/* Item Card */}
@@ -56,10 +66,17 @@ const ReturnPage = () => {
       <div className="return-summary-container">
         <div className="return-summary">
           <h3>Return summary</h3>
-          <p>1x HAVIT HV-G92 Gamepad</p>
-          <p>₹650.00</p>
+          <div className="summary-item">
+            <p>1x HAVIT HV-G92 Gamepad</p>
+            <p>₹650.00</p>
+          </div>
+
           <hr />
-          <p>Estimated refund value: ₹650.00</p>
+          <div className="summary-refund">
+            <p>Estimated refund value: </p>
+            <p>₹650.00</p>
+          </div>
+
           <p>Mastercard****1234</p>
         </div>
 
