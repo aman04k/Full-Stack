@@ -1,6 +1,6 @@
 const express = require("express");
 let router = express.Router()
-let {getAllPost, getSingPost, createPost, updatePost, deletePost} = require('../controllers/postController.js')
+let {getAllPost, getSinglePost, createPost, updatePost, deletePost} = require('../controllers/postController.js')
 
 let multer = require('multer')
 let auth = require('../utils/auth.js')
@@ -21,7 +21,7 @@ const images = multer({storage: storage})
 router.get('/', getAllPost)
 
 //to get singlepost
-router.get('/:id', getSingPost)
+router.get('/:id', getSinglePost)
 
 //to a create a post
 router.post('/', auth, image.single('image'),createPost)
