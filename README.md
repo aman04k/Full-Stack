@@ -1,12 +1,6 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Full Stack Web Development Courses</title>
-</head>
+
 <body>
-    <h1>🚀 My Full Stack Web Development Project</h1>
+    <h1>🚀 My Full Stack Web Development Courses</h1>
 
     <h2>📋 Project Overview</h2>
     <p>
